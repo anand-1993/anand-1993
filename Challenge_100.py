@@ -1,4 +1,4 @@
-"""# 1) Python program to reverse a number with explanation
+# 1) Python program to reverse a number with explanation
 x = input("Enter Number ")
 print(x[::-1]) #  taking input as string  array we can print all digit using index position in array, in python
 # we can print input in reverse order by putting range in index within square  bracket [ ].
@@ -368,17 +368,28 @@ for i in arr:
        break
 print(i)
 
-# 30)Remove duplicate occurence of the string
+# 30)Remove duplicate "occurence" of the string
 # inputString = "I M learning python , python is good language. python is dynamic language"
 inputString = "I M learning python , python is good language. python is dynamic language.".split()
-inputString = set(inputString)
+list1 = inputString
+index = []
+count = 0
+set1 = set()
+for i in range(len(list1)):
+    for x in range(len(inputString)):
+        if list1[i] == inputString[x]:
+            count += 1
+            if count > 1:
+                set1.add(x)
+    count = 0
 new = ""
-for i in inputString:
-    new = " ".join([new, i])
+for i in range(len(inputString)):
+    if i not in set1:
+        new = new + " " + inputString[i]
+        continue
+print(new)
 
-print(new)"""
-
-# Define the dictionary of students with property Name, age. Create list of dictionary
+# 31) Define the dictionary of students with property Name, age. Create list of dictionary
 #students = [ {"name" :"Sachin","age" : 20},{"name" :"pankaj","age": 30} ,{"name" :"Ajay","age": 10},
 # ,{"name" :"Ajay2","age": 24}]
 
